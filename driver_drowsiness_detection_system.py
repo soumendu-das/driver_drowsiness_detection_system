@@ -15,7 +15,7 @@ model=genai.GenerativeModel("gemini-2.0-flash")
 
 #alarm section
 def play_alarm():
-    playsound.playsound("D:/project/driver_drowsiness_detection_system/warning_alarm.mp3")
+    playsound.playsound("warning_alarm.mp3")
     
 #convert pictur bgr to rgb because PIL and gemini only understand RGB picture
 def analyze_frame(frame):
