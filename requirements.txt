@@ -3,4 +3,4 @@ os
 pillow
 google-generativeai
 numpy
-playsound==1.2.2
+
