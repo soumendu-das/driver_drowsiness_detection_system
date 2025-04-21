@@ -1,6 +1,6 @@
 import streamlit as st 
 import google.generativeai as genai
-import playsound
+
 import os
 from PIL import Image
 
@@ -11,8 +11,7 @@ model=genai.GenerativeModel("gemini-2.0-flash")
 #-------------------------------------------------------------------------------------
 
 #alarm section
-def play_alarm():
-    playsound.playsound("D:/project/driver_drowsiness_detection_system/warning_alarm.mp3")
+
     
 uploaded_image=st.file_uploader("upload :")
 
@@ -26,6 +25,6 @@ if uploaded_image:
     
     if response.text=="no":
         st.write(response.text)
-        play_alarm()
+        
     else:
         st.write(response.text)
