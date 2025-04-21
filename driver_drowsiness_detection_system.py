@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import playsound
 from PIL import Image
-
+import os
 #define api key
 os.environ["GOOGLE_API_KEY"]="AIzaSyAk3XfMjeiivTSZ9MYHNMmHetTV7GR_Ar0"
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
@@ -13,7 +13,7 @@ model=genai.GenerativeModel("gemini-2.0-flash")
 
 st.title("🚖 Real-time Eye State Detection ")
 def play_alarm():
-    playsound.playsound("D:/project/driver_drowsiness_detection_system/warning_alarm.mp3")
+    playsound.playsound("warning_alarm.mp3")
     
 uploaded_image=st.file_uploader("upload :")
 
